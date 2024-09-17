@@ -1,8 +1,8 @@
 # Tanzeem Hasan
 # Belugas
 # SoftDev
-# K03 -- Reviewing python 2.0
+# K02 -- Reviewing python
 # 2024-09-11
 # time spent: 3 minutes
-def string_times(str, n):
-  return str * n
+def make_pi():
+  return [3, 1, 4]

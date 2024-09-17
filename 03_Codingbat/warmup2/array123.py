@@ -3,7 +3,7 @@
 # SoftDev
 # K03 -- Reviewing python 2.0
 # 2024-09-11
-# time spent: 20 minutes
+# time spent: 3 minutes
 def array123(nums):
   for i in range(len(nums) - 2):
     if nums[i] == 1:

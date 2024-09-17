@@ -1,10 +1,10 @@
 # Tanzeem Hasan
 # Belugas
 # SoftDev
-# K03 -- Reviewing python 2.0
+# K02 -- Reviewing python
 # 2024-09-11
 # time spent: 3 minutes
-def front_times(str, n):
+def front3(str):
   if len(str) < 3:
-    return str*n
-  return str[0:3]*n
+    return str*3
+  return str[0:3]*3

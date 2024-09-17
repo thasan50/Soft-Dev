@@ -1,12 +1,16 @@
+# Tanzeem Hasan
+# Belugas
+# SoftDev
+# K02 -- Reviewing python
+# 2024-09-11
+# time spent: 3 minutes
 def sum13(nums):
   sum = 0
-  for i in range(len(nums)):
-    print(i)
-    if nums[i] == 13:
-      print("This is the other case")
-      i += 1
-    else:
+  i = 0
+  while i < len(nums):
+    if nums[i] != 13:
       sum += nums[i]
+      i+= 1
+    else:
+      i += 2
   return sum
-#print(sum13([1, 2, 2, 1]))
-print(sum13([1, 2, 13, 2, 1, 13]))

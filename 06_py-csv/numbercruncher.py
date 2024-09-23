@@ -11,6 +11,7 @@ HOW THIS SCRIPT WORKS
 '''
 
 import random
+import pprint
 
 with open("occupations.csv", "r") as file:
     f = file.read()
@@ -18,12 +19,28 @@ arr = f.split("\n")
 #print(arr)
 dict = {}
 total = 0
-for i in range(len(arr[1:len(arr)-1])):
+for i in range(1, len(arr[1:len(arr)-1])):
     if arr[i][0] == '\"':
         x = arr[i].split("\",")
-        print(arr[i].split("\","))
+        #print(arr[i].split("\","))
         #total += int(x[1])
         y = [x[0][1:], float(x[1])]
         total += y[1]
         dict[total] = y
-        print(dict)
+    else:
+        x = arr[i].split(",")
+        #print(x)
+        y = [x[0], float(x[1])]
+        total += y[1]
+        dict[total] = y
+#pprint.pp(dict)
+x = random.random() * 99.8;
+choice = [];
+temp = list(dict.keys())
+for i in temp:
+    if(i > x):
+        choice = dict.get(i)
+        break
+#print(x)
+#print(choice)
+print("The industry you got is " + choice[0] + ", that takes up ", choice[1], "% of the job market.")

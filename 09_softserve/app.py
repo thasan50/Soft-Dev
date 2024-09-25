@@ -1,24 +1,47 @@
-# Tanzeem Hasan
-# Cheerio (Tanzeem, Leon, Naomi)
+# Naomi Lai
+# Team name?
 # SoftDev
-# K09 -- Putting it Together
-# 9/24/2024
-# time spent: 1.5 hours
+# K09: Putting it Together
+# 2024-09-xx
+# time spent: xx
 
+import csv
+import random
 from flask import Flask
-import numbercruncher
 
-app = Flask(__name__)           #create instance of class Flask
+def read_csv(csvfile):
+    with open(csvfile, newline='') as csv_file:
+        header = next(csv_file)
+        percent = 0.0
+        content = csv.reader(csv_file)
+        dic = {}
+        for row in content:
+            percent += float(row[1])
+            percent = round(percent, 1)
+            dic[percent] = row[0]
 
-@app.route("/")                 #assign fxn to route
-def hello_world():
-    return '''Tanzeem Hasan <br>
-Cheerio (Tanzeem, Leon, Naomi) <br>
-SoftDev <br>
-K09 -- Putting it Together <br>
-9/24/2024 <br>
-time spent: 1.5 hours<br>''' + numbercruncher.func()
+        dic.popitem()
+        #print(dic) key: value --> percentage: occupation
+        return dic
+    
+def choose_random(csvfile):
+    data = read_csv(csvfile)
+    keys = [key for key in data.keys()]
+    random_num = random.random() * 99.8 #random_num is the chance
+    for i in range(len(keys)):
+        if keys[i] > random_num:
+            return data[keys[i-1]] 
+            #when percentage is greater than random_num, it is the right occupation
 
-if __name__ == "__main__":      # true if this file NOT imported
-    app.debug = True            # enable auto-reload upon code change
-    app.run()
+# keep function definitions above @app.route("/")
+
+app = Flask(__name__)
+@app.route("/")
+
+def occupation_chooser():
+    st = choose_random('occupations.csv')
+    return st
+
+# to do-- display list of occupations, display TPNG+roster(???)
+
+app.run()

@@ -1,9 +1,9 @@
-# Naomi Lai
-# Team name?
+# Tanzeem Hasan
+# Cheerio (Tanzeem, Leon, Naomi)
 # SoftDev
 # K09: Putting it Together
-# 2024-09-xx
-# time spent: xx
+# 2024-09-24
+# time spent: 1.5 hours
 
 import csv
 import random
@@ -39,9 +39,25 @@ app = Flask(__name__)
 @app.route("/")
 
 def occupation_chooser():
-    st = choose_random('occupations.csv')
-    return st
+    st = "<h2> Occupation chosen: " + choose_random('occupations.csv') + "</h2>"
+    data = read_csv('occupations.csv')
+    keys = [key for key in data.keys()]
+    output = "<h2>"
+    for i in range(len(keys)):
+        output += data[keys[i-1]]
+        output += "<br>"
+    output += "</h2>"
+    heading = '''
+    # Tanzeem Hasan <br>
+# Cheerio (Tanzeem, Leon, Naomi) <br>
+# SoftDev <br>
+# K09: Putting it Together <br>
+# 2024-09-24 <br>
+# time spent: 1.5 hours<br><br>'''
+    return heading + st + "<br>" + output
 
 # to do-- display list of occupations, display TPNG+roster(???)
 
-app.run()
+if __name__ == "__main__":      
+    app.debug = True            
+    app.run()

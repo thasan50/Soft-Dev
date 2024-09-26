@@ -22,6 +22,7 @@ NOTES and PREDICTIONS:
   - When you add the second app route to the url that appears after running app.py, the function h will be called on the website with its corresponding message in terminal. The standard route would give you "no hablo queso", while the second route will give you a random decimal in string form
   - "foo" is only plaintext, and should appear on the website without any additional text decoration or organization
   - foo.html has html tags, though the text is commented out. If the text wasn't commented out, I expect that it would look much the same as "foo" does when the link is clicked, just with a slightly different font.
+  <br>
 RESULTS:
   - We found the first prediction to be true in class
   <s>- Firefox can’t establish a connection to the server at localhost:5000. I suspect this needs to be done on a lab computer specifically. When I open foo and foo.html without clicking the links, the results line up with my predictions. </s>

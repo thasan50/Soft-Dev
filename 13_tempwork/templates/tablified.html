@@ -1,0 +1,43 @@
+<!--
+# Ivan Gontchar
+# Flying Fire Belugas: Ivan, Tanzeem, Jason
+# SoftDev
+# K13 - Template for Success
+# Sep 2024
+# time spent: 1 hour
+-->
+
+<!DOCTYPE html>
+<html>
+  <style>
+  table, th, td {
+    border: 1px solid black;
+  }
+  </style>
+  <head>
+    <title> {{ title }} </title>
+  </head>
+  <body>
+    <h1> {{ header }} </h1>
+    <p>{{ TNPG }}<br><br>
+      <b>{{randChoice}}</b>
+    </p>
+    <table>
+      <tr>
+        {% for label in topper%}
+          <th>{{label}}</th>
+        {% endfor %}
+      </tr>
+      {% for row in file %}
+        <tr>
+          <td> {{row[0]}} </td>
+          <td> {{row[1]}} </td>
+          <td><a href={{row[2]}}>{{row[2]}}</a></td>
+          <!-- {% for item in row %}
+            <td> {{item}} </td>
+          {% endfor %} -->
+        </tr>
+      {% endfor %}
+  </table>
+  </body>
+</html>

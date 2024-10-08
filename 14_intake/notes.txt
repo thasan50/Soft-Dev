@@ -1,0 +1,33 @@
+< your heading here >
+
+DISCO:
+* If you import a Python program, it automatically runs anything that isn't in
+a function.
+* Form seems to be a built in feature of html, and having action="/auth" allows a input text box. However, in what way can it be used to log a certain user in?
+
+* By requesting headers, the terminal returns several lines of information regarding the current machine and browser.
+
+* When uncommenting the comment that requests a username, the webapp returns a KeyError: 'username'
+	->but since users have to enter the username in the page, how is it possible for variable to have value before user input?
+	->having this request in the authorization page does work, however. I'm assuming because we now have information on the username that the user previously submitted
+-----------------------------------------------------------------------
+
+
+Q/C/C:
+* What is the difference between GET and POST in general, and how do they affect
+the Flask webpage?
+* What is the significance of DIAG?
+ *What function is app.py using when requesting headers? does the "***" play a role? What does it even do. 
+	-> uncomment code to test
+
+ *When running testmodO.py, where does the return statement go if we aren't running a webapp? The print statements do, however, get printed in the terminal
+
+-----------------------------------------------------------------------
+
+
+OTHER?
+* N/A
+*
+*
+-----------------------------------------------------------------------
+ 

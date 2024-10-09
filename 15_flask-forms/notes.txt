@@ -11,3 +11,4 @@ action="/auth": specifies where the form data will be sent when the form is subm
 The name attribute in name="username" defines the key that will be used to send this form data to the server.
 <input type="submit" name="sub1">:
 type="submit": This creates a button that submits the form when clicked.
+Get vs Post: Get is better for debugging due to more of the details being exposed, post is for when you've published stuff.

@@ -10,7 +10,7 @@ from flask import Flask, render_template, request, session, redirect, url_for
 app = Flask(__name__)    #create Flask object
 
 # makin' a supa-secret key
-app.secret_key = "1234";
+app.secret_key = "1234"
 
 # @app.route(("/"), methods=['GET', 'POST'])
 # def home():
@@ -23,7 +23,7 @@ app.secret_key = "1234";
 def login():
     # we though it is a good idea to always clear username from session if someone
     # wanders back to the login page via buttons or with the URL. For example, if they were at
-    # the reponse page and tried to go back to the home page, and then GO BACK to the
+    # the response page and tried to go back to the home page, and then GO BACK to the
     # response page, it would now remove their info and send them to the login page via
     # the code in response, since without this line, session would still have their username
     # and it would give them a response, which we thought would be weird

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+  # Ivan Gontchar
+  # Belugas (Ivan, Colyi, Tanzeem)
+  # SoftDev
+  # K16: Take and Keep
+  # 2024-10-09
+  # time spent: 3.5 hours
+ -->
+
+
+<html>
+
+  <head>
+    <title> LOGOUT PAGE </title>
+  </head>
+
+  <body>
+    <h1>
+      {{username}}, are you sure you wish to logout?
+    </h1>
+    <form action="/logout" method="POST">
+      <input type="submit" name="back", value="Go back">
+    </form>
+    <br>
+    <form action="/logout" method="POST">
+      <input type="submit" name="logout", value="Logout">
+    </form>
+    <br>
+  </body>
+
+</html>

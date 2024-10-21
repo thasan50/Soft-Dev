@@ -3,18 +3,18 @@
 
 _Step 0: Establish team comms. Fetch KtS._
 
-#### Your trio MISSION:
+#### Your trio MISSION: 
 Write a __simple Python script__ to import CSV data into a relational database.
 * Read data from CSV files,
 * create a database whose table structure mimics that of CSV files.
 * (In the care package you will find a CSV file of students and their IDs, and another linking said IDs to the students' current grades in some courses. Desire more lulz? Add extra, more expansive CSVs.)
 
-##### TASK the Foist:
+##### TASK the Foist: 
 Familiarize yourself with Python's CSV module, specifically its DictReader() method, as it will greatly expedite your work going forward. (If you are already familiar, do your crew a solid and *share protips/insights*.)
 
 ---
 
-##### TASK the Second:
+##### TASK the Second: 
 Read through the python skeleton db-building script, and talk it over with your ducky and teammates BEFORE you begin making it your own...
 
 ---
@@ -36,7 +36,7 @@ Specifications/Guidelines:
 * Comment liberally in-line. Speak to your future self and/or teammates.
 * Note anything notable in readme in app's root directory. (_KtS on hand always..._). Convert to markdown file if necessary.
 * _Behold! A care package awaits you. (You will need it for this...)_
-* __Use the sqlite shell__ to test SQL commands _before_ baking them into your Python script.
+* __Use the sqlite shell__ to test SQL commands _before_ baking them into your Python script. (`$ sqlite3` to launch, `Ctrl-D` to exit)
 * _Reminder:_ include heading as comment in all source files.
 <br>
 

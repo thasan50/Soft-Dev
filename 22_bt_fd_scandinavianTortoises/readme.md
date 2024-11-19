@@ -13,11 +13,12 @@ As a duo, select 2 other nearby teams' front-end framework on-ramps and use them
 
 ---
 DISCO:
--  There's a lot of stuff that Anastasia and Andy gave regarding user interactivity like navbars, radio buttons, email forms, sidebars and more, that I don't believe will be necessary for just telling viewers of the website about the subject matter.
-- I did not notice any ability to customize the classes to the extent that Tailwind allowed for. There you could write in all sorts of text styling and box design details, but with bootstrap it seems that you're generally required to use pre-existing classes. I haven't seen many descriptions of actual styling, which Tailwind provides shortcuts for.
+-  There's a lot of stuff that Anastasia and Andy gave regarding user interactivity like navbars, radio buttons, email forms, sidebars and more, that I don't believe will be necessary for just telling viewers of the website about the subject matter. (bt)
+- I did not notice any ability to customize the classes to the extent that Tailwind allowed for. There you could write in all sorts of text styling and box design details, but with bootstrap it seems that you're generally required to use pre-existing classes. I haven't seen many descriptions of actual styling, which Tailwind provides shortcuts for. (bt)
 
 QCC:
-
+- What is SASS? (fd)
+- What is ZURB? (fd)
 
 q0:
 0 (bt)

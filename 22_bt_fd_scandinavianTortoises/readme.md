@@ -13,12 +13,20 @@ As a duo, select 2 other nearby teams' front-end framework on-ramps and use them
 
 ---
 DISCO:
+-  There's a lot of stuff that Anastasia and Andy gave regarding user interactivity
+like navbars, radio buttons, email forms, sidebars and more, that I don't believe
+will be necessary for just telling viewers of the website about the subject matter.
+- I did not notice any ability to 
+
 
 QCC:
 
+
 q0:
+0 (bt)
 
 q0b:
+N/A (bt)
 
 q1:
 

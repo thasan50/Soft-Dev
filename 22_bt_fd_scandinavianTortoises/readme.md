@@ -19,14 +19,17 @@ DISCO:
 QCC:
 - What is SASS? (fd)
 - What is ZURB? (fd)
-
+- How would someone go about changing the colors of different sections of the page? (fd)
 q0:
 0 (bt)
+0 (fd)
 
 q0b:
 N/A (bt)
+N/A (fd)
 
 q1:
+I preferred Tailwind because there was much less ambiguity over which classes contained which type of styling. Both the bootstrap and foundation demos had sections with no other styling characteristics besides the ones that belonged to referenced classes. The name of a class would not tell you what to expect in regards to the type of styling. Even when you manually add styling, they don't appear to give you a shorthand for it in the manner that Tailwind does.
 
 ##### Specifications/Guidelines:
 * In your heading, replace your name with your TNPG and roster.

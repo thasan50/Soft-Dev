@@ -14,7 +14,7 @@ def hello_world():
     data = urllib.request.urlopen("https://api.nasa.gov/planetary/apod?date=2018-11-09&api_key=d6hAGcxE6hBZbreEovx6gS1P019bGHE43H5AfDBy")
     # print(data.info)
     w = json.loads(data.read())
-    print("check")
+    # print("check")
     return render_template('main.html', exp = w['explanation'], source=w['url'])
 
 

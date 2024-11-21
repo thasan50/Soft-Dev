@@ -1,6 +1,13 @@
 ## K23: A RESTful Journey Skyward
 ### Due: `2024-11-21r` before class
 
+Disco: 
+- Reference dictionary value by key, like using 'explanation' to reference the corresponding content
+
+QCC: 
+- Given that the data we reference is a JSON object string, when would we make use of turning a python dictionary into a JSON object string during this assignment? I saw json.dumps() recommended below, but I'm not sure where it would have been used
+
+
 _Step 0: Establish team comms. Fetch KtS._
 
 ### Your Duo MISSION: 

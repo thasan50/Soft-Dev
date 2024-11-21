@@ -3,7 +3,7 @@
   # SoftDev
   # K23: A RESTful Journey Skyward
   # 2024-11-21
-  # time spent: x mins
+  # time spent: 20 mins
 
 import urllib.request, json
 from flask import Flask, render_template

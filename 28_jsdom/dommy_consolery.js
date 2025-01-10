@@ -1,33 +1,3 @@
-/*
-  your PPTASK:
-
-  First, familiarize yourself with the given html file for this work.
-
-      then...
-
-  Test drive each bit of code in this file,
-  and insert comments galore, indicating anything
-  you discover,
-  have questions about,
-  or otherwise deem notable.
-
-  Have the given html file open as you work.
-
-  Write with your future self or teammates in mind.
-
-  If you find yourself falling out of flow mode, consult
-  - other teams
-  - MDN
-
-  A few comments have been pre-filled for you...
-
-  (delete this block comment once you are done)
-*/
-
-
-
-
-
 //Team ChewyChupacabras: Tanzeem Hasan, Ethan Sie, Brian Liu
 //SoftDev pd4
 // K28 -- Getting more comfortable with the dev console and the DOM
@@ -102,9 +72,34 @@ var stripe = function()
 
 //insert your implementations here for...
 // FIB
+function fibonacci(n) {
+    // Base case: fibonacci(0) = 0, fibonacci(1) = 1
+    if (n === 0) {
+        return 0;
+    } else if (n === 1) {
+        return 1;
+    }
+    // Recursive case: fibonacci(n) = fibonacci(n-1) + fibonacci(n-2)
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
 // FAC
+function fact(n) {
+    // Base case: factorial of 0 or 1 is 1
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+    // Recursive case: n * factorial of (n-1)
+    return n * fact(n - 1);
+}
 // GCD
-
+function gcd(a, b) {
+    // Base case: when one of the numbers becomes 0, the other number is the GCD
+    if (b === 0) {
+        return a;
+    }
+    // Recursive case: gcd(a, b) = gcd(b, a % b)
+    return gcd(b, a % b);
+}
 
 // In addition to the style shown above,
 //  you are encouraged to test drive the "arrow function syntax" as shown below.

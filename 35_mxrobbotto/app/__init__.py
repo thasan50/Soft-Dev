@@ -9,9 +9,9 @@ app.secret_key = 'your_secret_key'
 def init_sqlite_db():
     conn = sqlite3.connect('database.db')
     print("Opened database successfully")
-
+    
     conn.execute('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT UNIQUE, password TEXT)')
-    conn.execute('CREATE TABLE IF NOT EXISTS blogs (id INTEGER PRIMARY KEY AUTOINCREMENT, user_id INTEGER, title TEXT, content TEXT, FOREIGN KEY(user_id) REFERENCES users(id))')
+    conn.execute('CREATE TABLE IF NOT EXISTS blogs (id INTEGER PRIMARY KEY AUTOINCREMENT, user_id INTEGER, title TEXT UNIQUE, content TEXT, FOREIGN KEY(user_id) REFERENCES users(id))')
     print("Tables created successfully")
     conn.close()
 
@@ -35,7 +35,7 @@ def register():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-
+        
         with sqlite3.connect('database.db') as conn:
             cur = conn.cursor()
             try:
@@ -52,7 +52,7 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-
+        
         with sqlite3.connect('database.db') as conn:
             cur = conn.cursor()
             cur.execute("SELECT * FROM users WHERE username = ? AND password = ?", (username, password))
@@ -92,13 +92,16 @@ def create_blog():
         title = request.form['title']
         content = request.form['content']
         user_id = session['user_id']
-
+        
         with sqlite3.connect('database.db') as conn:
             cur = conn.cursor()
-            cur.execute("INSERT INTO blogs (user_id, title, content) VALUES (?, ?, ?)", (user_id, title, content))
-            conn.commit()
-            flash('Blog created successfully!')
-            return redirect(url_for('dashboard'))
+            try:
+                cur.execute("INSERT INTO blogs (user_id, title, content) VALUES (?, ?, ?)", (user_id, title, content))
+                conn.commit()
+                flash('Blog created successfully!')
+                return redirect(url_for('dashboard'))
+            except sqlite3.IntegrityError:
+                flash('Blog title already taken. Please choose a different one.')
     return render_template('create_blog.html')
 
 @app.route('/edit_blog/<int:blog_id>/', methods=['GET', 'POST'])
@@ -107,14 +110,17 @@ def edit_blog(blog_id):
     if request.method == 'POST':
         title = request.form['title']
         content = request.form['content']
-
+        
         with sqlite3.connect('database.db') as conn:
             cur = conn.cursor()
-            cur.execute("UPDATE blogs SET title = ?, content = ? WHERE id = ?", (title, content, blog_id))
-            conn.commit()
-            flash('Blog updated successfully!')
-            return redirect(url_for('dashboard'))
-
+            try:
+                cur.execute("UPDATE blogs SET title = ?, content = ? WHERE id = ?", (title, content, blog_id))
+                conn.commit()
+                flash('Blog updated successfully!')
+                return redirect(url_for('dashboard'))
+            except sqlite3.IntegrityError:
+                flash('Blog title already taken. Please choose a different one.')
+    
     with sqlite3.connect('database.db') as conn:
         cur = conn.cursor()
         cur.execute("SELECT * FROM blogs WHERE id = ?", (blog_id,))

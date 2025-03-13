@@ -176,3 +176,131 @@ Message interrupted
 Copilot was interrupted before it could finish this message.
 
 Sure! Let's enhance the application with the requested features: Add error messages for failed login attempts. Ensure unique usernames during registration. Add CSS styling and JavaScript for a better user interface. Step 1: Update app.py app.py app.py from flask import Flask, render_template, redirect, url_for, request, session, flash import sqlite3 from functools import wraps app = Flask(__name__) Public code references from 5 repositories 1 vulnerability detected Step 2: Update HTML Templates templates/index.html templates/index.html <!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> templates/register.html templates/register.html <!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> Message interrupted Copilot was interrupted before it could finish this message.
+
+
+templates/register.html
+Public code references from 40 repositories
+
+templates/login.html
+Public code references from 40 repositories
+
+templates/dashboard.html
+Public code references from 34 repositories
+
+templates/create_blog.html
+Public code references from 31 repositories
+
+templates/edit_blog.html
+Public code references from 31 repositories
+
+templates/view_blog.html
+Public code references from 29 repositories
+
+Step 3: Add CSS and JavaScript
+static/styles.css
+Public code references from 7 repositories
+
+static/scripts.js
+Public code references from 11 repositories
+
+Step 4: Create requirements.txt
+Step 5: Run the Application
+
+    Ensure you have Flask installed:
+
+sh
+
+pip install -r requirements.txt
+
+Public code references from 1 repository
+
+    Run the Flask application:
+
+sh
+
+python app.py
+
+Public code references from 1 repository
+
+This setup provides a web blog hosting site with user registration, login, and CRUD operations for blogs, better error handling, and basic CSS and JavaScript for a nicer user interface.
+
+Sure! Let's move the app.py and associated files into a folder called app and rename app.py to __init__.py. Here is the updated directory structure and the modified files:
+Directory Structure
+Code
+
+app/
+├── __init__.py
+├── templates/
+│   ├── index.html
+│   ├── register.html
+│   ├── login.html
+│   ├── dashboard.html
+│   ├── create_blog.html
+│   ├── edit_blog.html
+│   ├── view_blog.html
+└── static/
+    ├── styles.css
+    └── scripts.js
+requirements.txt
+
+Public code references from 12 repositories
+
+Updated Files
+app/__init__.py
+Public code references from 11 repositories
+
+1 vulnerability detected
+
+app/templates/index.html
+Public code references from 21 repositories
+
+app/templates/register.html
+Public code references from 40 repositories
+
+app/templates/login.html
+Public code references from 40 repositories
+
+app/templates/dashboard.html
+Public code references from 37 repositories
+
+app/templates/create_blog.html
+Public code references from 31 repositories
+
+app/templates/edit_blog.html
+Public code references from 32 repositories
+
+app/templates/view_blog.html
+Public code references from 32 repositories
+
+app/static/styles.css
+Public code references from 6 repositories
+
+app/static/scripts.js
+Public code references from 4 repositories
+
+Step 3: Create requirements.txt
+Step 4: Run the Application
+
+    Ensure you have Flask installed:
+
+sh
+
+pip install -r requirements.txt
+
+    Run the Flask application:
+
+sh
+
+python -m app
+
+This setup organizes the Flask application into an app folder with an __init__.py file, and includes templates, static files, and the necessary configurations.
+
+Now make it so that blog titles cannot be repeated. Only show the files that are changed, and do not change more files than necessary.
+
+Sure! We'll update the application to ensure that blog titles are unique. This requires changes in the __init__.py file to handle the uniqueness constraint for blog titles.
+Updated Files
+app/__init__.py
+Public code references from 5 repositories
+
+1 vulnerability detected
+

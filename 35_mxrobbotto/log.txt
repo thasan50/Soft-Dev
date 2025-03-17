@@ -1,4 +1,8 @@
 DISCO:
+- Deny SQLalchemy
+- Ask for CSS styling, JS functionality
+- Remind copilot to not use fstrings
+- Ask for correct library versions
 
 Q/C/C:
 q0: How many tries did it take to "get it right?"
